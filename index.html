@@ -137,6 +137,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-常用易忘的CSS小技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/">常用易忘的CSS小技巧</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="archive-article-date">
+  	<time datetime="2020-05-07T02:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-解决-inline-block-元素设置-overflow-hidden-属性导致相邻行内元素向下偏移"><a href="#1-解决-inline-block-元素设置-overflow-hidden-属性导致相邻行内元素向下偏移" class="headerlink" title="1. 解决 inline-block 元素设置 overflow: hidden 属性导致相邻行内元素向下偏移"></a>1. 解决 inline-block 元素设置 overflow: hidden 属性导致相邻行内元素向下偏移</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">vertical-algin</span>: bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-溢出部分显示省略号"><a href="#2-溢出部分显示省略号" class="headerlink" title="2. 溢出部分显示省略号"></a>2. 溢出部分显示省略号</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 单行省略号</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden; <span class="comment">/* 溢出隐藏 */</span></span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipis; <span class="comment">/* 溢出部分显示省略号 */</span></span><br><span class="line">    <span class="attribute">white-space</span>: nowrap; <span class="comment">/* 限制文本不换行 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 多行文本省略号</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden; <span class="comment">/* 溢出隐藏 */</span></span><br><span class="line">    <span class="attribute">display</span>: -webkit-box; <span class="comment">/* 将盒子变为可伸缩盒子模型 */</span></span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical; <span class="comment">/* 排列方式 */</span></span><br><span class="line">    <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">/* 限制文本显示行数 */</span></span><br><span class="line">    <span class="attribute">word-break</span>: break-all; <span class="comment">/* 实现任意位置换行（英文单词内换行） */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-无聊画球球" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -603,6 +685,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
             <div class="clearfix"></div>
