@@ -137,6 +137,206 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Selenium-UI自动化测试是如何工作的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/11/Selenium-UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84/">Selenium UI自动化测试是如何工作的</a>
+    </h1>
+  
+
+        
+        <a href="/2020/11/11/Selenium-UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84/" class="archive-article-date">
+  	<time datetime="2020-11-11T10:59:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Selenium与webdriver的通讯"><a href="#Selenium与webdriver的通讯" class="headerlink" title="Selenium与webdriver的通讯"></a>Selenium与webdriver的通讯</h4><p>w3c webdriver wire protocol - 基于http协议</p>
+<p><img src="https://tjswk2008.github.io/img/wire1.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2020/11/11/Selenium-UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/11/11/Selenium-UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-如何做一个切牌洗牌的动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/18/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%87%E7%89%8C%E6%B4%97%E7%89%8C%E7%9A%84%E5%8A%A8%E7%94%BB/">如何做一个切牌洗牌的动画</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/18/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%87%E7%89%8C%E6%B4%97%E7%89%8C%E7%9A%84%E5%8A%A8%E7%94%BB/" class="archive-article-date">
+  	<time datetime="2020-08-18T08:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h4><p>使用z-index控制牌的层级实现洗牌的效果</p>
+<p>Html代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"gifts_container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"gift gift_decorator gift_decorator_1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/1.png"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/back.png"</span> <span class="attr">class</span>=<span class="string">"back"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"gift gift_decorator gift_decorator_2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/2.png"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/back.png"</span> <span class="attr">class</span>=<span class="string">"back"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"gift gift_decorator gift_decorator_3"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/3.png"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/back.png"</span> <span class="attr">class</span>=<span class="string">"back"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"gift gift_decorator gift_decorator_4"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/4.png"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./images/back.png"</span> <span class="attr">class</span>=<span class="string">"back"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/08/18/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%87%E7%89%8C%E6%B4%97%E7%89%8C%E7%9A%84%E5%8A%A8%E7%94%BB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/18/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%87%E7%89%8C%E6%B4%97%E7%89%8C%E7%9A%84%E5%8A%A8%E7%94%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-卷轴展开动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/14/%E5%8D%B7%E8%BD%B4%E5%B1%95%E5%BC%80%E5%8A%A8%E7%94%BB/">卷轴展开动画</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/14/%E5%8D%B7%E8%BD%B4%E5%B1%95%E5%BC%80%E5%8A%A8%E7%94%BB/" class="archive-article-date">
+  	<time datetime="2020-07-14T07:39:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h4><p>切图分成左右卷轴棍子，中间部分</p>
+<p>具体代码如下：(Vue做的移动端动画)</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll_container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll_left"</span> <span class="attr">ref</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll_right"</span> <span class="attr">ref</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll_center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll_content"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"common"</span> <span class="attr">:class</span>=<span class="string">"&#123;'msg': userStatus == 11&#125;"</span>&gt;</span></span><br><span class="line">            尊敬的 <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"name"</span>&gt;</span>&#123;&#123;userInfo.wechat_nickname&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"btn_rewrite"</span> @<span class="attr">click</span>=<span class="string">"$router.push('/info');"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/14/%E5%8D%B7%E8%BD%B4%E5%B1%95%E5%BC%80%E5%8A%A8%E7%94%BB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/14/%E5%8D%B7%E8%BD%B4%E5%B1%95%E5%BC%80%E5%8A%A8%E7%94%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webAudio" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -500,237 +700,10 @@
 
 
   
-    <article id="post-RequireJs Mismatched报错总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/">RequireJs Mismatched报错总结</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-04-17T04:11:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>tags: []<br>categories: []<br>date: 2020-04-17 12:11:00</p>
-<hr>
-<hr>
-<p>文章开始之前需要感谢一下席子同学调试出了在哪种具体情况会报错。</p>
-<h3 id="常见的一个报错"><a href="#常见的一个报错" class="headerlink" title="常见的一个报错"></a>常见的一个报错</h3><p> 在使用requirejs时候经常会遇到这种报错</p>
-<p><img src="/img/require_error.png" alt="upload successful"></p>
-<p> 上述错误一般发生在 在你页面中同时引入requirejs和其他库文件的时候</p>
-<h3 id="为什么会发生这个错误？"><a href="#为什么会发生这个错误？" class="headerlink" title="为什么会发生这个错误？"></a>为什么会发生这个错误？</h3><p> requirejs 载入js的时候发生了以下的过程</p>
-<pre><code>1. 根据requirejs调用的相对路径生成一个唯一标示，例如：&quot;./modulea&quot;
-2. 动态创建script标签并插入到浏览器中，实现js文件的下载
-3. 下载完成后浏览器会自动执行js文件中的define函数，define函数会将返回的结果放入到一个 队列GlobalDefine中，这个时候define 函数不知道这个组件的唯一标示是什么，所以他只好把返回的结果放到一个公共的地方等待被知道这个标示的人领走
-4. 动态创建的script 进入onload事件，在这里可以知道组件的ID，在队列中认领出define返回的结果，并给他对应的id；</code></pre>
-        
-          <a class="article-more-a" href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-RequireJs 路径的三种写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/17/RequireJs%20%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95/">RequireJs 路径的三种写法</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/17/RequireJs%20%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-04-17T03:25:18.820Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="RequireJs-路径的三种写法"><a href="#RequireJs-路径的三种写法" class="headerlink" title="RequireJs 路径的三种写法"></a>RequireJs 路径的三种写法</h1><h3 id="写法一：完整url地址"><a href="#写法一：完整url地址" class="headerlink" title="写法一：完整url地址"></a>写法一：完整url地址</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">requirejs([<span class="string">'https://www.baidu.com/a.js'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>这种写法很显然，不必多做解释</p>
-<h3 id="写法二：相对路径（带-js后缀）"><a href="#写法二：相对路径（带-js后缀）" class="headerlink" title="写法二：相对路径（带.js后缀）"></a>写法二：相对路径（带.js后缀）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">requirejs([<span class="string">'a.js'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>如果载入的模块名称包含.js ,requirejs 会载入相对当前页面的路径下的js文件<br>比如当前访问的是:<br><a href="http://www.baidu.com/test/index.html" target="_blank" rel="noopener">http://www.baidu.com/test/index.html</a>,<br>上面的例子载入的js文件是:<br> <a href="http://www.baidu.com/test/a.js" target="_blank" rel="noopener">http://www.baidu.com/test/a.js</a>;</p>
-<h3 id="写法三：相对路径（不带-js后缀）"><a href="#写法三：相对路径（不带-js后缀）" class="headerlink" title="写法三：相对路径（不带.js后缀）"></a>写法三：相对路径（不带.js后缀）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">requirejs.config(&#123;</span><br><span class="line">    baseUrl:<span class="string">"http://ztgame.com/libs/"</span></span><br><span class="line">&#125;)</span><br><span class="line">requirejs([<span class="string">'a'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>如果载入的模块名称不带.js后缀，requirejs 会根据配置的baseUrl来寻找对应的模块,上面的例子中requirejs最终载入的js文件地址是：<br><a href="http://ztgame.com/libs/a.js" target="_blank" rel="noopener">http://ztgame.com/libs/a.js</a>  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/17/RequireJs%20%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-深入浅出JavaScript运行机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">深入浅出JavaScript运行机制</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2018-10-26T06:07:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、引子"><a href="#一、引子" class="headerlink" title="一、引子"></a>一、引子</h3><p>本文介绍JavaScript运行机制，这部分比较抽象，我们先从一道面试题入手：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line"><span class="comment">// 请问打印顺序</span></span><br></pre></td></tr></table></figure>
-<p>这题看似很简单，但如果你不知道Javascript运行机制很容易答错</p>
-<h3 id="二、理解JS的单线程概念"><a href="#二、理解JS的单线程概念" class="headerlink" title="二、理解JS的单线程概念"></a>二、理解JS的单线程概念</h3><p>JavaScript语言的一大特点就是单线，也就是说同一时间只能做一件事<br>JavaScript的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？<br>所以，为了避免复杂性，从一诞生，JavaScript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。</p>
-<h3 id="三、理解任务队列"><a href="#三、理解任务队列" class="headerlink" title="三、理解任务队列"></a>三、理解任务队列</h3><p>单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。JavaScript语言的设计者意识到这个问题，将所有任务分成两种，<code>一种是同步任务（synchronous），另一种是异步任务（asynchronous）</code>。同步任务指的是，在主线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；异步任务指的是，不进入主线程、而进入”任务队列”（task queue）的任务，只有”任务队列”通知主线程，某个异步任务可以执行了，该任务才会进入主线程执行。异步任务包括宏任务和微任务(后面会重点介绍)，接下来我们通过两个例子说明同步任务和异步任务的区别：</p>
-        
-          <a class="article-more-a" href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 

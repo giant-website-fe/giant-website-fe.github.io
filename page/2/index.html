@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://giant-website-fe.github.io">
-  <title>Archives | GIANT WebSite FE</title>
+  <title>GIANT WebSite FE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="GIANT WebSite FE Github 上的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GIANT WebSite FE">
-<meta property="og:url" content="http:&#x2F;&#x2F;giant-website-fe.github.io&#x2F;archives&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;giant-website-fe.github.io&#x2F;page&#x2F;2&#x2F;index.html">
 <meta property="og:site_name" content="GIANT WebSite FE">
 <meta property="og:description" content="GIANT WebSite FE Github 上的博客">
 <meta property="article:author" content="GIANT WebSite FE">
@@ -137,169 +137,188 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-RequireJs Mismatched报错总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/">RequireJs Mismatched报错总结</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2020-04-17T04:11:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>tags: []<br>categories: []<br>date: 2020-04-17 12:11:00</p>
+<hr>
+<hr>
+<p>文章开始之前需要感谢一下席子同学调试出了在哪种具体情况会报错。</p>
+<h3 id="常见的一个报错"><a href="#常见的一个报错" class="headerlink" title="常见的一个报错"></a>常见的一个报错</h3><p> 在使用requirejs时候经常会遇到这种报错</p>
+<p><img src="/img/require_error.png" alt="upload successful"></p>
+<p> 上述错误一般发生在 在你页面中同时引入requirejs和其他库文件的时候</p>
+<h3 id="为什么会发生这个错误？"><a href="#为什么会发生这个错误？" class="headerlink" title="为什么会发生这个错误？"></a>为什么会发生这个错误？</h3><p> requirejs 载入js的时候发生了以下的过程</p>
+<pre><code>1. 根据requirejs调用的相对路径生成一个唯一标示，例如：&quot;./modulea&quot;
+2. 动态创建script标签并插入到浏览器中，实现js文件的下载
+3. 下载完成后浏览器会自动执行js文件中的define函数，define函数会将返回的结果放入到一个 队列GlobalDefine中，这个时候define 函数不知道这个组件的唯一标示是什么，所以他只好把返回的结果放到一个公共的地方等待被知道这个标示的人领走
+4. 动态创建的script 进入onload事件，在这里可以知道组件的ID，在队列中认领出define返回的结果，并给他对应的id；</code></pre>
+        
+          <a class="article-more-a" href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/11/Selenium-UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84/" class="archive-article-date">
-  	<time datetime="2020-11-11T10:59:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/11/Selenium-UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84/">Selenium UI自动化测试是如何工作的</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/17/RequireJs%20Mismatched%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/">展开全文 >></a>
+        </p>
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/18/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%87%E7%89%8C%E6%B4%97%E7%89%8C%E7%9A%84%E5%8A%A8%E7%94%BB/" class="archive-article-date">
-  	<time datetime="2020-08-18T08:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-RequireJs 路径的三种写法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/18/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%88%87%E7%89%8C%E6%B4%97%E7%89%8C%E7%9A%84%E5%8A%A8%E7%94%BB/">如何做一个切牌洗牌的动画</a>
+      <a class="article-title" href="/2020/04/17/RequireJs%20%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95/">RequireJs 路径的三种写法</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/04/17/RequireJs%20%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-17T03:25:18.820Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="RequireJs-路径的三种写法"><a href="#RequireJs-路径的三种写法" class="headerlink" title="RequireJs 路径的三种写法"></a>RequireJs 路径的三种写法</h1><h3 id="写法一：完整url地址"><a href="#写法一：完整url地址" class="headerlink" title="写法一：完整url地址"></a>写法一：完整url地址</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">requirejs([<span class="string">'https://www.baidu.com/a.js'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<p>这种写法很显然，不必多做解释</p>
+<h3 id="写法二：相对路径（带-js后缀）"><a href="#写法二：相对路径（带-js后缀）" class="headerlink" title="写法二：相对路径（带.js后缀）"></a>写法二：相对路径（带.js后缀）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">requirejs([<span class="string">'a.js'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>如果载入的模块名称包含.js ,requirejs 会载入相对当前页面的路径下的js文件<br>比如当前访问的是:<br><a href="http://www.baidu.com/test/index.html" target="_blank" rel="noopener">http://www.baidu.com/test/index.html</a>,<br>上面的例子载入的js文件是:<br> <a href="http://www.baidu.com/test/a.js" target="_blank" rel="noopener">http://www.baidu.com/test/a.js</a>;</p>
+<h3 id="写法三：相对路径（不带-js后缀）"><a href="#写法三：相对路径（不带-js后缀）" class="headerlink" title="写法三：相对路径（不带.js后缀）"></a>写法三：相对路径（不带.js后缀）</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">requirejs.config(&#123;</span><br><span class="line">    baseUrl:<span class="string">"http://ztgame.com/libs/"</span></span><br><span class="line">&#125;)</span><br><span class="line">requirejs([<span class="string">'a'</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>如果载入的模块名称不带.js后缀，requirejs 会根据配置的baseUrl来寻找对应的模块,上面的例子中requirejs最终载入的js文件地址是：<br><a href="http://ztgame.com/libs/a.js" target="_blank" rel="noopener">http://ztgame.com/libs/a.js</a>  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/17/RequireJs%20%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%89%E7%A7%8D%E5%86%99%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/14/%E5%8D%B7%E8%BD%B4%E5%B1%95%E5%BC%80%E5%8A%A8%E7%94%BB/" class="archive-article-date">
-  	<time datetime="2020-07-14T07:39:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-深入浅出JavaScript运行机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/14/%E5%8D%B7%E8%BD%B4%E5%B1%95%E5%BC%80%E5%8A%A8%E7%94%BB/">卷轴展开动画</a>
+      <a class="article-title" href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">深入浅出JavaScript运行机制</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/webAudio/" class="archive-article-date">
-  	<time datetime="2020-07-13T01:51:08.163Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+        
+        <a href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" class="archive-article-date">
+  	<time datetime="2018-10-26T06:07:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/webAudio/">WebAudio -- 音频截取拼接合成。</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/link%E6%A0%87%E7%AD%BE%E7%9A%84%E4%B8%A4%E7%A7%8D%E4%B8%8D%E5%B8%B8%E8%A7%81%E5%8F%88%E5%AE%9E%E7%94%A8%E7%9A%84rel%E5%B1%9E%E6%80%A7/" class="archive-article-date">
-  	<time datetime="2020-05-15T11:31:13.611Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/link%E6%A0%87%E7%AD%BE%E7%9A%84%E4%B8%A4%E7%A7%8D%E4%B8%8D%E5%B8%B8%E8%A7%81%E5%8F%88%E5%AE%9E%E7%94%A8%E7%9A%84rel%E5%B1%9E%E6%80%A7/">link标签的两种不常见又实用的rel属性</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、引子"><a href="#一、引子" class="headerlink" title="一、引子"></a>一、引子</h3><p>本文介绍JavaScript运行机制，这部分比较抽象，我们先从一道面试题入手：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line"><span class="comment">// 请问打印顺序</span></span><br></pre></td></tr></table></figure>
+<p>这题看似很简单，但如果你不知道Javascript运行机制很容易答错</p>
+<h3 id="二、理解JS的单线程概念"><a href="#二、理解JS的单线程概念" class="headerlink" title="二、理解JS的单线程概念"></a>二、理解JS的单线程概念</h3><p>JavaScript语言的一大特点就是单线，也就是说同一时间只能做一件事<br>JavaScript的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？<br>所以，为了避免复杂性，从一诞生，JavaScript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。</p>
+<h3 id="三、理解任务队列"><a href="#三、理解任务队列" class="headerlink" title="三、理解任务队列"></a>三、理解任务队列</h3><p>单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。JavaScript语言的设计者意识到这个问题，将所有任务分成两种，<code>一种是同步任务（synchronous），另一种是异步任务（asynchronous）</code>。同步任务指的是，在主线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；异步任务指的是，不进入主线程、而进入”任务队列”（task queue）的任务，只有”任务队列”通知主线程，某个异步任务可以执行了，该任务才会进入主线程执行。异步任务包括宏任务和微任务(后面会重点介绍)，接下来我们通过两个例子说明同步任务和异步任务的区别：</p>
+        
+          <a class="article-more-a" href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/#more">more >></a>
+        
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/">常用易忘的CSS小技巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -309,81 +328,49 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/26/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAJavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/17/%E6%97%A0%E8%81%8A%E7%94%BB%E7%90%83%E7%90%83/" class="archive-article-date">
-  	<time datetime="2020-04-17T09:52:41.784Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/17/%E6%97%A0%E8%81%8A%E7%94%BB%E7%90%83%E7%90%83/">Balls</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/17/JavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%EF%BC%9Asort%E3%80%81%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95(1)/" class="archive-article-date">
-  	<time datetime="2020-04-17T04:17:10.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/17/JavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%EF%BC%9Asort%E3%80%81%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95(1)/">JavaScript中的数组排序：sort、冒泡和二分法(1)</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
@@ -407,9 +394,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
