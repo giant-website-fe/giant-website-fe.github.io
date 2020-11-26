@@ -137,6 +137,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavaScript中的数组排序：sort、冒泡和二分法(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/17/JavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%EF%BC%9Asort%E3%80%81%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95(1)/">JavaScript中的数组排序：sort、冒泡和二分法(1)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/17/JavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%EF%BC%9Asort%E3%80%81%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95(1)/" class="archive-article-date">
+  	<time datetime="2020-04-17T04:17:10.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="示例数组-data-10-9-8-12-按照从小到达的顺序排序"><a href="#示例数组-data-10-9-8-12-按照从小到达的顺序排序" class="headerlink" title="示例数组 data=[10,9,8,12] 按照从小到达的顺序排序"></a>示例数组 <code>data=[10,9,8,12]</code> 按照从小到达的顺序排序</h3><p>一、sort排序<br>之前一直以为直接<code>data.sort()</code>就可以了，事实表明，基础还是不够扎实，查了一下手册发现sort是这样定义的：</p>
+<blockquote>
+<p>如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。</p>
+<p>如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：</p>
+<ul>
+<li>若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。</li>
+<li>若 a 等于 b，则返回 0。</li>
+<li>若 a 大于 b，则返回一个大于 0 的值。</li>
+</ul>
+</blockquote>
+<p>所以要实现这个功能需要自定义函数</p>
+        
+          <a class="article-more-a" href="/2020/04/17/JavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%EF%BC%9Asort%E3%80%81%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95(1)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/17/JavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%EF%BC%9Asort%E3%80%81%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95(1)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-RequireJs Mismatched报错总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
