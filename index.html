@@ -137,6 +137,71 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用graphql-apollo客户端的一些知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/01/%E4%BD%BF%E7%94%A8graphql-apollo%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/">使用graphql apollo客户端的一些知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/01/%E4%BD%BF%E7%94%A8graphql-apollo%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2020-12-01T10:24:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="如何使用上传功能"><a href="#如何使用上传功能" class="headerlink" title="如何使用上传功能"></a>如何使用上传功能</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ApolloClient &#125; <span class="keyword">from</span> <span class="string">'apollo-client'</span></span><br><span class="line"><span class="keyword">const</span> &#123; createUploadLink &#125; = <span class="built_in">require</span>(<span class="string">'apollo-upload-client'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> apiLink = createUploadLink(&#123;</span><br><span class="line">  uri: process.env.VUE_APP_BASE_API</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> afterware = <span class="keyword">new</span> ApolloLink(<span class="function">(<span class="params">operation, forward</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> forward(operation).map(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> response</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> apiClient = <span class="keyword">new</span> ApolloClient(&#123;</span><br><span class="line">  link: afterware.concat(apiLink),</span><br><span class="line">  cache: <span class="keyword">new</span> InMemoryCache()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> apolloProvider = <span class="keyword">new</span> VueApollo(&#123;</span><br><span class="line">  clients: &#123;</span><br><span class="line">    api: apiClient <span class="comment">// 需要添加请求头</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  provide: apolloProvider.provide(),</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/12/01/%E4%BD%BF%E7%94%A8graphql-apollo%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/01/%E4%BD%BF%E7%94%A8graphql-apollo%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-使用vue-ssr做门户网站的静态生成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -593,76 +658,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/07/%E5%B8%B8%E7%94%A8%E6%98%93%E5%BF%98%E7%9A%84CSS%E5%B0%8F%E6%8A%80%E5%B7%A7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-无聊画球球" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/17/%E6%97%A0%E8%81%8A%E7%94%BB%E7%90%83%E7%90%83/">Balls</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/17/%E6%97%A0%E8%81%8A%E7%94%BB%E7%90%83%E7%90%83/" class="archive-article-date">
-  	<time datetime="2020-04-17T09:52:41.784Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近Vue和React 玩的有点腻歪，换换胃口，用canvas写了个弹力球小动画效果</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>首先得准备创建一个 画板<br>$ document.createElement(“canvas”);<br>$ document.body.appendChild(state.canvs);<br>…..略过废话</p>
-<h3 id="一切从球开始"><a href="#一切从球开始" class="headerlink" title="一切从球开始"></a>一切从球开始</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cxt.arc(坐标X, 坐标Y, 半径, 0, Math.PI * 2);</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;zt2.web.ztgame.com&#x2F;act&#x2F;html5_js&#x2F;demo&#x2F;images&#x2F;frist.png&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ 假设它的初始速度 初始速度 &#x3D; 1</span><br><span class="line">$ 球球坐标Y +&#x3D; 初始速度  往下落</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ 球球坐标Y -&#x3D; 初始速度  往上弹</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/04/17/%E6%97%A0%E8%81%8A%E7%94%BB%E7%90%83%E7%90%83/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/17/%E6%97%A0%E8%81%8A%E7%94%BB%E7%90%83%E7%90%83/">展开全文 >></a>
         </p>
       
 
